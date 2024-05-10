@@ -1,0 +1,387 @@
+
+:root {
+    --azul: #232733;
+    --azul-claro: #2b3340;
+    --cinza: #cec5bc;
+    --cinza-transparente: #cec5bc3a;
+    --branco: #fff;
+    --preto: #000;
+    --links: #c8cbd0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+/* barra do topo */
+
+.top-bar {
+    background-color: var(--azul);
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.top-bar > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.top-bar .horario {
+    justify-content: center;
+    background-color: var(--azul-claro);
+}
+
+.top-bar .area-cliente {
+    justify-content: flex-end;
+}
+
+.top-bar > div > span {
+    color: var(--branco);
+    font-weight: 100;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: var(--cinza-transparente);
+}
+
+.top-bar > div > div > h4 {
+    color: var(--cinza);
+    font-size: 14px
+}
+
+.top-bar > div > div>  span {
+    color: var(--branco);
+    font-size: 12px
+    
+}
+
+button.principal {
+    border: none;
+    background-color: var(--cinza);
+    padding: 8px 12px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px 0px var(--cinza);
+    font-weight: 800;
+}
+
+button.principal:hover {
+    background-color: var(--links);
+}
+
+
+
+/* Header */
+header {
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    height: 110px;
+    padding: 5px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    text-align: center;
+}
+
+#logo img {
+    width: 80px;
+}
+
+#logo h4 {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul a {
+    font-size: 16px;
+    color: var(--azul);
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: all .5s ease;
+}
+
+nav ul a:hover {
+    color: var(--cinza);
+}
+
+nav ul a.ativo {
+    font-weight: 800;
+}
+
+nav ul a.btn {
+    background-color: var(--azul);
+    color: var(--branco);
+    border-radius: 30px;
+    font-weight: 10px;
+}
+
+header .banner {
+    height: 100%;
+    background-image: url(./imagens/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding-right: 50%;
+    padding-left: 10%;
+    position: relative;
+}
+
+header .banner > .filtro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--azul);
+    z-index: 1;
+    opacity: 0.8;
+}
+ 
+header .banner :not(.filtro) {
+    z-index: 2;
+}
+
+header .banner h1 {
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--cinza);
+}
+
+header .banner p {
+    font-weight: 500;
+    color: var(--cinza);
+}
+
+
+/* Pilares */
+
+.pilares {
+    padding: 0 10%;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    background-color: var(--branco);
+    
+}
+
+.pilar {
+    position: relative;
+    top: -40px;
+    background-color: var(--azul);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 15px;
+    z-index: 3;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 0px var(--cinza);
+}
+
+.pilar span {
+    color: var(--branco);
+    font-weight: 100;
+    font-size: 40px;
+    background-color: var(--cinza-transparente);
+    border-radius: 50%;
+    padding: 5px;
+    position: relative;
+    top: -30px;
+}
+
+.pilar h4 {
+    color: var(--cinza);
+    text-transform: uppercase;
+    position: relative;
+    top: -15px;
+}
+
+.pilar p {
+    color: var(--links);
+    font-weight: 300;
+}
+
+
+/* servicos */
+
+.servicos {
+    padding: 20px 10% 80px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.servicos .titulo {
+    text-align: center;
+}
+
+.servicos .titulo h1 {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.servicos .titulo p {
+    color: var(--preto);
+    font-weight: 100;
+}
+
+.servicos .itens {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 30px 0 0 0;
+}
+
+.servicos .itens article {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.servicos .itens article span {
+    background-color: var(--cinza);
+    padding: 10px;
+    font-weight: 100;
+    border-radius: 20px;
+    font-size: 30px;
+}
+
+.servicos .itens article h4 {
+    padding-bottom: 10px;
+}
+
+.servicos .itens article p {
+    font-weight: 200;
+    color: var(--preto);
+    font-size: 14px;
+}
+
+.servicos .itens article a {
+    font-weight: 100;
+    color: dodgerblue;
+    font-size: 14px;
+}
+
+
+/* fale-connosco */
+
+.fale-conosco {
+    background-image: url(./imagens/bg-contacto.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+}
+
+.fale-conosco > form {
+    width: 100%;
+    z-index: 2;
+}
+
+.fale-conosco > div:not(.filtro) {
+    width: 100%;
+    z-index: 2;
+}
+
+.fale-conosco > .filtro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--azul);
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 10px;
+}
+
+.campo label {
+    color: #ccc;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.campo input,
+.campo textarea {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--cinza-transparente);
+    padding: 8px 0;
+    color: var(--links);
+}
+
+.fale-conosco > div h1 {
+    color: var(--cinza);
+    font-size: 30px;
+}
+
+.fale-conosco > div p {
+    color: var(--links);
+    font-weight: 100;
+    padding: 10px 0;
+}
+
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 20px 10%;
+    background-color: var(--cinza);
+}
+
+footer > img {
+    width: 80px;
+}
+
+footer > div {
+    width: 100%;
+}
+
+footer > div p {
+    font-weight: 200;
+    margin-top: 5px;
+    font-size: 14px;
+}
